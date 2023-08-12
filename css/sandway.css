@@ -1,0 +1,169 @@
+:root {
+    /* CSS HSL */
+    --melon: hsla(9, 97%, 86%, 1);
+    --pale-dogwood: hsla(9, 88%, 90%, 1);
+    --misty-rose: hsla(8, 74%, 92%, 1);
+    --seashell: hsla(9, 48%, 95%, 1);
+    --platinum: hsla(60, 8%, 90%, 1);
+    --platinum-2: hsla(144, 15%, 87%, 1);
+    --linen: hsla(32, 31%, 89%, 1);
+    --champagne-pink: hsla(19, 100%, 93%, 1);
+    --apricot: hsla(25, 100%, 86%, 1);
+    --apricotdark: hsla(25, 100%, 50%, 1);
+    --peach: hsla(28, 98%, 80%, 1);
+    --magnolia: hsla(310, 12%, 91%, 1);
+    --mimi-pink: hsla(338, 80%, 90%, 1);
+    --mint-cream: hsla(162, 21%, 91%, 1);
+    --light-blue: hsla(188, 44%, 82%, 1);
+    --isabelline: hsla(48, 14%, 93%, 1);
+    --lavender-web: hsla(224, 88%, 93%, 1);
+    --periwinkle: hsla(224, 92%, 90%, 1);
+    --textcolor: hsl(0, 0%, 10%);
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../webfonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../webfonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textcolor);
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0.15rem;
+    width: calc(100% - 0.5rem);
+    table-layout: auto;
+}
+
+table thead tr th {
+    font-weight: 400;
+    border: 1px solid var(--linen);
+    padding: 0.5rem;
+    background-color: var(--linen);
+    text-align: left;
+}
+
+table tbody tr:hover {
+    background-color: var(--platinum);
+}
+
+table tbody tr td {
+    border: 1px solid var(--linen);
+    padding: 0.5rem;
+}
+
+.sandway {
+    height: 100vh;
+    width: 100vw;
+    color: var(--textcolor);
+    font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+    display: grid;
+    grid-template-columns: 4rem auto;
+    grid-template-rows: 4rem auto;
+    grid-template-areas:
+        "menu header"
+        "sidebar content";
+}
+
+.menu {
+    grid-area: menu;
+    background-color: var(--peach);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu a {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--apricotdark);
+    border-radius: 4px;
+}
+
+.menu a:hover {
+    background-color: var(--melon);
+    cursor: pointer;
+}
+
+.header {
+    grid-area: header;
+    background-color: var(--peach);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--apricot);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.content {
+    grid-area: content;
+    background-color: var(--seashell);
+    padding: 0.5rem;
+}
+
+.panel {
+    border: 1px solid var(--linen);
+    border-radius: 4px;
+    padding: 0.15rem;
+    margin: 0.15rem;
+    overflow-x: auto;
+}
+
+.item {
+    border-radius: 4px;
+}
+
+.header .item {
+    height: 3rem;
+    width: 3rem;
+    margin-left: 0.5rem;
+    border: 1px solid var(--apricotdark);
+    background-color: var(--apricot);
+}
+
+.header .item:hover {
+    background-color: var(--melon);
+    cursor: pointer;
+}
+
+.sidebar .item {
+    height: 3rem;
+    width: 3rem;
+    margin-top: 0.5rem;
+    background-color: var(--peach);
+    border: 1px solid var(--apricotdark);
+}
+
+.sidebar .item:hover {
+    background-color: var(--melon);
+    cursor: pointer;
+}
