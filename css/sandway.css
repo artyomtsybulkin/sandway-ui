@@ -69,6 +69,29 @@ table tbody tr td {
     padding: 0.5rem;
 }
 
+form {
+    margin: 0.15rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+}
+
+form button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+    padding: 0.5rem;
+    background-color: var(--apricot);
+    border: 1px solid var(--apricotdark);
+    border-radius: 4px;
+}
+
+form input {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11pt;
+    padding: 0.5rem;
+    border: 1px solid var(--apricotdark);
+    border-radius: 4px;
+}
+
 .sandway {
     height: 100vh;
     width: 100vw;
@@ -128,13 +151,17 @@ table tbody tr td {
     grid-area: content;
     background-color: var(--seashell);
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
 }
 
 .panel {
     border: 1px solid var(--linen);
     border-radius: 4px;
-    padding: 0.15rem;
-    margin: 0.15rem;
+    padding: 0.25rem;
+    margin: 0.25rem;
     overflow-x: auto;
 }
 
